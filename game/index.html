@@ -3,7 +3,7 @@
 <script>
 
     function setResolutionScale() {
-        newResScale = parseInt(document.getElementById("resScale").innerHtml);
+        newResScale = parseInt(document.getElementById("resScale").value);
         document.getElementById("frame").setAttribute("style","height:" + 200 * newResScale + "px;width: " + 320 * newResScale + "px"); 
     }
 
