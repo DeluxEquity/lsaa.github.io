@@ -4,8 +4,7 @@
 
     function setResolutionScale() {
         newResScale = document.getElementById("resScale").innerHtml;
-        document.getElementById("frame").style.height = 200 * newResScale;
-        document.getElementById("frame").style.width = 320 * newResScale;
+        document.getElementById("frame").setAttribute("style","height:" + 200 * newResScale + "px;width: " + 320 * newResScale + "px"); 
     }
 
 </script>
