@@ -3,9 +3,9 @@
 <script>
 
     function setResolutionScale() {
-        newResScale = getElementById("resScale").innerHtml;
-        getElementById("frame").style.height = 200 * newResScale;
-        getElementById("frame").style.width = 320 * newResScale;
+        newResScale = document.getElementById("resScale").innerHtml;
+        document.getElementById("frame").style.height = 200 * newResScale;
+        document.getElementById("frame").style.width = 320 * newResScale;
     }
 
 </script>
@@ -14,7 +14,7 @@
 <iframe id="frame" src="test.html" style="height:600px;width:960px;" frameborder=0></iframe> 
 <div style="color: white">
     Resolution Scale: 
-    <input id="resScale">3</input>
+    <input id="resScale" placeholder="3"></input>
     <Button onClick="setResolutionScale()">Change</Button>
 </div>
 </body>
