@@ -1,1 +1,19 @@
-Teste
+
+
+<script>
+
+    function setResolutionScale() {
+        newResScale = parseInt(document.getElementById("resScale").value);
+        document.getElementById("frame").setAttribute("style","height:" + 200 * newResScale + "px;width: " + 320 * newResScale + "px"); 
+    }
+
+</script>
+
+<body style="background-color:#000;text-align:center">
+<iframe id="frame" src="test.html" style="height:600px;width:960px;" frameborder=0></iframe> 
+<div style="color: white">
+    Resolution Scale: 
+    <input id="resScale" placeholder="3"></input>
+    <Button onClick="setResolutionScale()">Change</Button>
+</div>
+</body>
