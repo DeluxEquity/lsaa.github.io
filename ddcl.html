@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<script>
+			function gup( name, url ) {
+				if (!url) url = location.href;
+				name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+				var regexS = "[\\?&]"+name+"=([^&#]*)";
+				var regex = new RegExp( regexS );
+				var results = regex.exec( url );
+				return results == null ? null : results[1];
+			}
+
+			var socket = new WebSocket('ws://localhost:13666/');
+
+			socket.onopen = function () {
+				socket.send("ddcl_replay " + gup("id"));
+			}
+
+			socket.onmessage = function (message) {
+				content.innerHTML += message.data +'<br />';
+			};
+
+			socket.onerror = function (error) {
+				console.log('WebSocket error: ' + error);
+			};
+		</script>
+	</body>
+</html>
