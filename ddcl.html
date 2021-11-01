@@ -4,8 +4,8 @@
 		<meta content="Jump Knight 23.5998 | KyoZM" property="og:title" />
 		<meta content="Load replay in ddstats-rust" property="og:description" />
 		<meta content="https://lsaa.github.io/ddcl?id=1747" property="og:url" />
-		<meta content="https://devildaggers.info/Images/Daggers/GoldSmall.png" property="og:image" />
-		<meta content="#FF8010" data-react-helmet="true" name="theme-color" />
+		<meta content="https://devildaggers.info/Images/Daggers/GoldenSmall.png" property="og:image" />
+		<meta content="#FFD700" data-react-helmet="true" name="theme-color" />
 <style>
 
 #LOADER{
@@ -105,8 +105,6 @@ body{
 
 			socket.onmessage = function (message) {
 				console.log(message);
-				document.body.innerHTML += message.data +'<br />';
-
 				if(message.data.startsWith('[OK] Loaded DDCL Replay') && message.data.endsWith(gup("id"))){
 					// RESET RUST TEXT TO "loaded", and set squid color to 57b357
 					// document.documentElement.style.setProperty('--loaderColor', '#57b357');
